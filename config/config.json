@@ -1,42 +1,53 @@
 {
-    "general": {
+  "general": {
+    "title": "Filestash",
+    "theme": "light",
+    "default_connection": "s3"
+  },
+  "features": {
+    "file_previews": true,
+    "sharing": false,
+    "search": true
+  },
+  "log": {
+    "level": "info"
+  },
+  "email": {},
+  "oauth": {},
+  "connections": [
+    {
+      "type": "s3",
+      "label": "Cloudflare R2",
+      "bucket": "filestash-bucket",
+      "region": "auto",
+      "endpoint": "https://<YOUR_ACCOUNT_ID>.r2.cloudflarestorage.com",
+      "access_key": "${R2_ACCESS_KEY}",
+      "secret_key": "${R2_SECRET_KEY}",
+      "prefix": "uploads/"
     },
-    "features": {
+    {
+      "type": "webdav",
+      "label": "WebDav"
     },
-    "log": {
+    {
+      "type": "ftp",
+      "label": "FTP"
     },
-    "email": {
+    {
+      "type": "sftp",
+      "label": "SFTP"
     },
-    "oauth": {
+    {
+      "type": "git",
+      "label": "GIT"
     },
-    "connections": [
-        {
-            "type": "webdav",
-            "label": "WebDav"
-        },
-        {
-            "type": "ftp",
-            "label": "FTP"
-        },
-        {
-            "type": "sftp",
-            "label": "SFTP"
-        },
-        {
-            "type": "git",
-            "label": "GIT"
-        },
-        {
-            "type": "s3",
-            "label": "S3"
-        },
-        {
-            "type": "dropbox",
-            "label": "Dropbox"
-        },
-        {
-            "type": "gdrive",
-            "label": "Drive"
-        }
-    ]
+    {
+      "type": "dropbox",
+      "label": "Dropbox"
+    },
+    {
+      "type": "gdrive",
+      "label": "Drive"
+    }
+  ]
 }
